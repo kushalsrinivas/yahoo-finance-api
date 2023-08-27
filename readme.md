@@ -1,10 +1,10 @@
-# IMPORTANT LEGAL DISCLAIMER 
+# IMPORTANT LEGAL DISCLAIMER
+
 Yahoo!, Y!Finance, and Yahoo! finance are registered trademarks of Yahoo, Inc.
 
 this is not affiliated, endorsed, or vetted by Yahoo, Inc. It's an open-source tool that uses Yahoo's publicly available APIs, and is intended for research and educational purposes.
 
 You should refer to Yahoo!'s terms of use (here, here, and here) for details on your rights to use the actual data downloaded. Remember - the Yahoo! finance API is intended for personal use only.
-
 
 # Yahoo Finance API Documentation
 
@@ -14,7 +14,7 @@ The Yahoo Finance API provides a simple way to fetch company information using t
 
 ## Endpoints
 
-### Get Company Information
+## Get Company Information
 
 Retrieve detailed information about a company using its ticker symbol.
 
@@ -55,7 +55,7 @@ Retrieve detailed information about a company using its ticker symbol.
 - `askSize`: Size of the ask.
 - ... (other fields, similar to the provided example)
 
-### Get Historical Data
+## Get Historical Data
 
 Retrieve historical data for a company using its ticker symbol for the past one month.
 
@@ -87,7 +87,7 @@ Retrieve historical data for a company using its ticker symbol for the past one 
     "Stock Splits": 0,
     "Volume": 39635300
   },
-  // ... 
+  // ...
 
   "2023-08-24": {
     "Close": 319.9700012207031,
@@ -111,7 +111,9 @@ Retrieve historical data for a company using its ticker symbol for the past one 
 ```
 
 ### Response Fields
+
 The response for the historical data endpoint includes fields such as:
+
 - `Close`: Closing price for the specified date.
 - `Dividends`: Dividend amount on the specified date.
 - `High`: Highest price during the specified date.
