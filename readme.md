@@ -10,7 +10,7 @@ You should refer to Yahoo!'s terms of use (here, here, and here) for details on 
 
 The Yahoo Finance API provides a simple way to fetch company information using their ticker symbols. This API utilizes the `yfinance` Python module to fetch data from Yahoo Finance. You can use the following endpoints to retrieve information about a specific company.
 
-**Base URL**: `https://yahoo-finance-o4q4dihi1-kushalsrinivas.vercel.app/`
+**Base URL**: `https://yahoo-finance-api-xi.vercel.app`
 
 ## Endpoints
 
@@ -129,7 +129,7 @@ The response for the historical data endpoint includes fields such as:
 ```python
 import requests
 
-base_url = "https://yahoo-finance-o4q4dihi1-kushalsrinivas.vercel.app/"
+base_url = "https://yahoo-finance-api-xi.vercel.app"
 ticker = "TSLA"
 endpoint = f"/{ticker}"
 url = f"{base_url}{endpoint}"
