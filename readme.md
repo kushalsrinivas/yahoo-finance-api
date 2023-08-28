@@ -122,6 +122,88 @@ The response for the historical data endpoint includes fields such as:
 - `Stock Splits`: Stock splits on the specified date.
 - `Volume`: Volume of trades on the specified date.
 
+
+## Get Company CashFLow
+
+Retrive Cashflow of the ticker
+
+
+- **Endpoint**: `/cashflow/{ticker}`
+- **Method**: GET
+- **Parameters**:
+  - `{ticker}`: The ticker symbol of the company for which you want to fetch cashflow data.
+- **Example**: `/cashflow/MSFT`
+
+#### Response Format
+```json
+{
+  "Asset Impairment Charge": {
+    "2019-12-31": 193000000.0,
+    "2020-12-31": 202000000.0,
+    "2021-12-31": 140000000.0,
+    "2022-12-31": 177000000.0
+  },
+  "Beginning Cash Position": {
+    "2019-12-31": 4277000000.0,
+    "2020-12-31": 6783000000.0,
+    "2021-12-31": 19901000000.0,
+    "2022-12-31": 18144000000.0
+  },
+  ///...
+  "Sale Of Investment": {
+    "2019-12-31": NaN,
+    "2020-12-31": NaN,
+    "2021-12-31": NaN,
+    "2022-12-31": 22000000.0
+  },
+  "Stock Based Compensation": {
+    "2019-12-31": 898000000.0,
+    "2020-12-31": 1734000000.0,
+    "2021-12-31": 2121000000.0,
+    "2022-12-31": 1560000000.0
+  }
+}
+```
+
+## Get Company Icome Statement
+Retrive a company's annual income statement
+
+- **Endpoint**: `/incomestatement/{ticker}`
+- **Method**: GET
+- **Parameters**:
+  - `{ticker}`: The ticker symbol of the company for which you want to fetch annual income data.
+- **Example**: `/incomestatement/MSFT`
+
+#### Response Format
+```json
+{
+  "Average Dilution Earnings": {
+    "2019-12-31": NaN,
+    "2020-12-31": NaN,
+    "2021-12-31": NaN,
+    "2022-12-31": 1000000.0
+  },
+  "Cost Of Revenue": {
+    "2019-12-31": 20509000000.0,
+    "2020-12-31": 24906000000.0,
+    "2021-12-31": 40217000000.0,
+    "2022-12-31": 60609000000.0
+  },
+ //...
+  "Total Unusual Items": {
+    "2019-12-31": -149000000.0,
+    "2020-12-31": 0.0,
+    "2021-12-31": 27000000.0,
+    "2022-12-31": -176000000.0
+  },
+  "Total Unusual Items Excluding Goodwill": {
+    "2019-12-31": -149000000.0,
+    "2020-12-31": 0.0,
+    "2021-12-31": 27000000.0,
+    "2022-12-31": -176000000.0
+  }
+}
+```
 ## Examples
 
 ### Python Code Example

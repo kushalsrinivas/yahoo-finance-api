@@ -20,3 +20,25 @@ def get_history(ticker):
         for col in df.columns:
             jsonData[str(date).split(' ')[0]][col] = df.loc[date][col]
     return jsonData
+
+@app.route("/cashflow/<ticker>")
+def get_cashflow(ticker):
+    stock = yf.Ticker(ticker)
+    df = stock.cashflow
+    jsonData = {}
+    for index, date in enumerate(df.index):
+        jsonData[str(date)] = {}
+        for col in df.columns:
+            jsonData[str(date)][str(col).split(' ')[0]] = df.loc[date][col]
+    return jsonData
+
+@app.route("/incomestatement/<ticker>")
+def get_incomestatement(ticker):
+    stock = yf.Ticker(ticker)
+    df = stock.incomestmt
+    jsonData = {}
+    for index, date in enumerate(df.index):
+        jsonData[str(date)] = {}
+        for col in df.columns:
+            jsonData[str(date)][str(col).split(' ')[0]] = df.loc[date][col]
+    return jsonData
